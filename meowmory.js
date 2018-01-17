@@ -1,7 +1,10 @@
 $(document).ready(function(){
     var total = $(".card-memory").length;
+    var score = 100;
+    var clickCount = 0;
     
     $('.card-memory').mousedown(function(){
+
         $(this).addClass('flipped');
         $(this).removeClass('unflipped');
 
@@ -28,11 +31,15 @@ $(document).ready(function(){
                                                 .addClass('matched');
             }
         });
-        console.log("checkA = " + checkA);
-        console.log("checkB = " + checkB);
+        console.log("score = " + score);
 
         if ($(".matched").length >= total){
-            alert(" ^ↀᴥↀ^ You won! ^ↀᴥↀ^ ");
+            alert(" ^ↀᴥↀ^ You won! ^ↀᴥↀ^ \nScore: " + score + "Points\nMeow");
+        } else {
+            clickCount++;
+            if (clickCount >= total * 2 && clickCount % 2 == 0) {
+                score -= parseInt(100/total);
+            }
         }
     });
 });
