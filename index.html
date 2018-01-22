@@ -11,10 +11,10 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
-    <link   rel="stylesheet" 
+    <!-- <link   rel="stylesheet" 
             href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" 
             integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" 
-            crossorigin="anonymous">
+            crossorigin="anonymous"> -->
     <link rel="stylesheet" href="style.css">
     <script	  src="https://code.jquery.com/jquery-3.2.1.min.js"
 			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -26,35 +26,54 @@
     <![endif]-->
 
     <main class="container">
-        <div class="row">
-            <div class="col card-memory card-1">
+        <div class="wrapper">
+            <div class="card-memory card-1">
                 <img class="front face" src="img/front.png" alt="Card image cap">
                 <img class="back face" src='img/cat_1.jpg' style="background-color: red;" >
             </div>
-            <div class="col card-memory card-2">
+            <div class="card-memory card-2">
                 <img class="front face" src="img/front.png" alt="Card image cap">
                 <img class="back face" src='img/cat_2.jpg' style="background-color: red;" >
             </div>
-            <div class="col card-memory card-1">
+            <div class="card-memory card-1">
                 <img class="front face" src="img/front.png" alt="Card image cap">
                 <img class="back face" src='img/cat_1.jpg' style="background-color: red;" >
             </div>
-        </div>
-        <div class="row">
-            <div class="col card-memory card-3">
+            <div class="card-memory card-3">
                 <img class="front face" src="img/front.png" alt="Card image cap">
                 <img class="back face" src='img/cat_3.jpg' style="background-color: red;" >
             </div>
-            <div class="col card-memory card-2">
+            <div class="card-memory card-2">
                 <img class="front face" src="img/front.png" alt="Card image cap">
                 <img class="back face" src='img/cat_2.jpg' style="background-color: red;" >
             </div>
-            <div class="col card-memory card-3">
+            <div class="card-memory card-3">
                 <img class="front face" src="img/front.png" alt="Card image cap">
                 <img class="back face" src='img/cat_3.jpg' style="background-color: red;" >
             </div>
         </div>
+        <img src="img/gear.png" class="gear" height="50px" onclick="openNav()">
     </main>
+
+     <!-- The overlay -->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <select id="difficulty">
+                <option value="3,2">Easy</option>
+                <option value="4,3">Medium</option>
+                <option value="5,4">Hard</option>
+                <option value="6,5">Extreme</option>
+            </select>
+            <a href="#" id="reset">Reset</a>
+        </div>
+      
+    </div>
+
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
