@@ -9,7 +9,7 @@ $(document).ready(function(){
     var clickCount = 0;
     CardClick(); // initialise click logic
     $(".wrapper").css("grid-template-columns", "repeat("+ x +", auto)");
-    $(".wrapper").css("grid-auto-rows", 100 / y + "rem");
+    $(".wrapper").css("grid-auto-rows", 100 / (y*2) + "rem");
 
 
     $("#difficulty").change(function(){
@@ -24,16 +24,21 @@ $(document).ready(function(){
         console.log("new game");
         CardClick(); // reinitialise click logic
         $(".wrapper").css("grid-template-columns", "repeat("+ x +", auto)");
-        $(".wrapper").css("grid-auto-rows", 100 / y + "rem");
+        $(".wrapper").css("grid-auto-rows", 100 / (y*2) + "rem");
     });
 
     $("#reset").click(function(){
+        xyarr = gridSize.split(','); // split the co-ords
+        x = xyarr[0]; // co-ord 1 is x
+        y = xyarr[1]; // co-ord 2 is y
         makeGrid(x, y);
         total = $(".card-memory").length;
         score = 100;
         clickCount = 0;
         console.log("new game");
         CardClick(); // reinitialise click logic)
+        $(".wrapper").css("grid-template-columns", "repeat("+ x +", auto)");
+        $(".wrapper").css("grid-auto-rows", 100 / (y*2) + "rem");
     });
 
     function makeGrid(x, y){
