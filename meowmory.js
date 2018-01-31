@@ -9,7 +9,7 @@ $(document).ready(function(){
     var clickCount = 0;
     CardClick(); // initialise click logic
     $(".wrapper").css("grid-template-columns", "repeat("+ x +", auto)");
-    $(".wrapper").css("grid-auto-rows", 100 / (y*2) + "rem");
+    $(".wrapper").css("grid-auto-rows", 100 / (x * 2) + "rem");
 
 
     $("#difficulty").change(function(){
@@ -24,7 +24,7 @@ $(document).ready(function(){
         debug(2, "new game");
         CardClick(); // reinitialise click logic
         $(".wrapper").css("grid-template-columns", "repeat("+ x +", auto)");
-        $(".wrapper").css("grid-auto-rows", 100 / (y*2) + "rem");
+        $(".wrapper").css("grid-auto-rows", 100 / (x * 2) + "rem");
     });
 
     $("#reset").click(function(){
@@ -38,7 +38,7 @@ $(document).ready(function(){
         debug(2, "new game");
         CardClick(); // reinitialise click logic)
         $(".wrapper").css("grid-template-columns", "repeat("+ x +", auto)");
-        $(".wrapper").css("grid-auto-rows", 100 / (y*2) + "rem");
+        $(".wrapper").css("grid-auto-rows", 100 / (x * 2) + "rem");
     });
 
     function makeGrid(x, y){
