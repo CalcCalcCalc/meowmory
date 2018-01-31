@@ -21,7 +21,7 @@ $(document).ready(function(){
         total = $(".card-memory").length;
         score = 100;
         clickCount = 0;
-        console.log("new game");
+        debug(2, "new game");
         CardClick(); // reinitialise click logic
         $(".wrapper").css("grid-template-columns", "repeat("+ x +", auto)");
         $(".wrapper").css("grid-auto-rows", 100 / (y*2) + "rem");
@@ -35,7 +35,7 @@ $(document).ready(function(){
         total = $(".card-memory").length;
         score = 100;
         clickCount = 0;
-        console.log("new game");
+        debug(2, "new game");
         CardClick(); // reinitialise click logic)
         $(".wrapper").css("grid-template-columns", "repeat("+ x +", auto)");
         $(".wrapper").css("grid-auto-rows", 100 / (y*2) + "rem");
@@ -58,10 +58,10 @@ $(document).ready(function(){
         var shuffled = [];
 
         function GetUniqueNumber(arr, range){
-            console.log(range);
+            debug(2, range);
             var randNum = Math.floor((Math.random() * range) + 1);
             if (arr.includes(randNum)){
-                console.log(randNum + " is not a unique number in array.\nGo fish!");
+                debug(2, randNum + " is not a unique number in array.\nGo fish!");
                 return GetUniqueNumber(arr, range);
             }
             return randNum;
@@ -73,7 +73,7 @@ $(document).ready(function(){
             uniqueCatHistory.push(catIndex);
         }
 
-        console.log(uniqueCats);
+        debug(2, uniqueCats);
 
         for (cat of uniqueCats){
             cats.push(cat);
@@ -86,8 +86,8 @@ $(document).ready(function(){
             shuffleHistory.push(randomNumber);
         }
 
-        console.log("cats: " + cats);
-        console.log("shuffled: " + shuffled);
+        debug(2, "cats: " + cats);
+        debug(2, "shuffled: " + shuffled);
 
         for (cat of shuffled){
             grid.append(
