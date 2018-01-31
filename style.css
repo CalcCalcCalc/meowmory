@@ -1,3 +1,16 @@
+@font-face {
+    font-family: "catbox";
+    src: url("/fonts/CATBôx.ttf");
+}
+@font-face {
+    font-family: "gotham-regular";
+    src: url("/fonts/Gotham_21023.ttf");
+}
+@font-face {
+    font-family: "gotham-bold";
+    src: url("/fonts/Gotham-Bold_21010.ttf");
+}
+
 .flipped{
 	-webkit-animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
 	        animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
@@ -69,8 +82,17 @@
 /* Hac dis */
 
 
-html, main{
-    height: 100%
+html, body, main, .start, .game, .gameover{
+    height: 100%;
+    margin: 0;
+}
+
+main{
+    width: 46.8%;
+}
+
+footer{
+    position: relative;
 }
 
 .card-memory {
@@ -207,4 +229,69 @@ html, main{
     grid-template-columns: repeat(3, auto);
     grid-auto-rows: 10rem;
     grid-gap: 1em;
+}
+
+.start{
+    background: linear-gradient(to bottom right, #44338d 0%,#6a8bc8 100%);
+}
+
+.btn-start{
+    position: absolute;
+    transform: translate(0,-50%);
+    top: 51.5%;
+    height: 5.5rem;
+    width: 16rem;
+    background: linear-gradient(to right, #f15c43 0%,#f9a54f 100%);
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-start > p{
+    position: absolute;
+    transform: translate(0,-50%);
+    top: 50%;
+    font-family: catbox;
+    color: white;
+    font-size: 5.5rem;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 1.1;
+    cursor: pointer;
+}
+
+.intro{
+    position: absolute;
+    transform: translate(0,-50%);
+    top: 32%;
+    font-family: gotham-bold;
+    color: white;
+    font-size: 3rem;
+    width: 35rem;
+    text-align: center;
+    line-height: 3rem;
+    letter-spacing: 0.05rem;
+}
+
+.title{
+    position: absolute;
+    bottom: 0;
+    font-family: catbox;
+    color: white;
+    font-size: 2.6rem;
+    margin: 1.75rem;
+    margin-bottom: 0.2rem;
+    letter-spacing: 0.05rem;
+}
+
+.credits{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: gotham-regular;
+    color: white;
+    font-size: 0.76rem;
+    margin: 1.5rem;
+    margin-right: 2rem;
 }
