@@ -8,8 +8,13 @@ $(document).ready(function(){
     var score = 100;
     var clickCount = 0;
     CardClick(); // initialise click logic
-    $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
-    $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
+    if (window.innerWidth > 770){
+        $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
+        $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
+    } else {
+        $(".wrapper").css("grid-template-columns", "repeat("+ y +"," + 100 / (x * 4) + "rem)");
+        $(".wrapper").css("grid-template-rows", "repeat(" + x + "," + 100 / (x * 4) + "rem)");
+    }
 
 
     $("#difficulty").change(function(){
@@ -23,8 +28,13 @@ $(document).ready(function(){
         clickCount = 0;
         debug(2, "new game");
         CardClick(); // reinitialise click logic
-        $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
-        $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
+        if (window.innerWidth > 770){
+            $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
+            $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
+        } else {
+            $(".wrapper").css("grid-template-columns", "repeat("+ y +"," + 100 / (x * 4) + "rem)");
+            $(".wrapper").css("grid-template-rows", "repeat(" + x + "," + 100 / (x * 4) + "rem)");
+        }
     });
 
     $("#reset").click(function(){
@@ -37,8 +47,13 @@ $(document).ready(function(){
         clickCount = 0;
         debug(2, "new game");
         CardClick(); // reinitialise click logic)
-        $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
-        $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
+        if (window.innerWidth > 770){
+            $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
+            $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
+        } else {
+            $(".wrapper").css("grid-template-columns", "repeat("+ y +"," + 100 / (x * 4) + "rem)");
+            $(".wrapper").css("grid-template-rows", "repeat(" + x + "," + 100 / (x * 4) + "rem)");
+        }
     });
 
     function makeGrid(x, y){
