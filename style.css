@@ -1,14 +1,14 @@
 @font-face {
     font-family: "catbox";
-    src: url("/fonts/CATBôx.ttf");
+    src: url("fonts/CATBôx.ttf");
 }
 @font-face {
     font-family: "gotham-regular";
-    src: url("/fonts/Gotham_21023.ttf");
+    src: url("fonts/Gotham_21023.ttf");
 }
 @font-face {
     font-family: "gotham-bold";
-    src: url("/fonts/Gotham-Bold_21010.ttf");
+    src: url("fonts/Gotham-Bold_21010.ttf");
 }
 
 .flipped{
