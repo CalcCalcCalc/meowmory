@@ -8,8 +8,8 @@ $(document).ready(function(){
     var score = 100;
     var clickCount = 0;
     CardClick(); // initialise click logic
-    $(".wrapper").css("grid-template-columns", "repeat("+ x +", auto)");
-    $(".wrapper").css("grid-auto-rows", 100 / (x * 2) + "rem");
+    $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
+    $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
 
 
     $("#difficulty").change(function(){
@@ -23,8 +23,8 @@ $(document).ready(function(){
         clickCount = 0;
         debug(2, "new game");
         CardClick(); // reinitialise click logic
-        $(".wrapper").css("grid-template-columns", "repeat("+ x +", auto)");
-        $(".wrapper").css("grid-auto-rows", 100 / (x * 2) + "rem");
+        $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
+        $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
     });
 
     $("#reset").click(function(){
@@ -37,8 +37,8 @@ $(document).ready(function(){
         clickCount = 0;
         debug(2, "new game");
         CardClick(); // reinitialise click logic)
-        $(".wrapper").css("grid-template-columns", "repeat("+ x +", auto)");
-        $(".wrapper").css("grid-auto-rows", 100 / (x * 2) + "rem");
+        $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
+        $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
     });
 
     function makeGrid(x, y){
@@ -92,8 +92,8 @@ $(document).ready(function(){
         for (cat of shuffled){
             grid.append(
                 "<div class='card-memory card-" + cat + "'>" +
-                "<img class='front face' src='img/front.png' alt='Card image cap'>" +
-                "<img class='back face' src='img/cat_" + cat + ".jpg' style='background-color: red;' >" +
+                "<img class='front face' src='img/front.svg' alt='Card image cap'>" +
+                "<img class='back face' src='img/cat_" + cat + ".svg' >" +
                 "</div>"
             );
         }
@@ -144,16 +144,4 @@ $(document).ready(function(){
             }
         });
     }
-
-
 });
-
-/* Open when someone clicks on the span element */
-function openNav() {
-    document.getElementById("myNav").style.width = "15%";
-}
-
-    /* Close when someone clicks on the "x" symbol inside the overlay */
-function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-} 
