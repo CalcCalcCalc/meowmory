@@ -423,8 +423,8 @@ footer{
         transform-style:preserve-3d;
         -webkit-backface-visibility:hidden;
         backface-visibility:hidden;
-        max-height: 100px;
-        max-width: 100px;
+        max-height: 130px;
+        max-width: 130px;
     }
     
     .card-memory img{
@@ -553,7 +553,7 @@ footer{
         height: 3rem;
         font-size: 2rem;
         position: absolute;
-        left: 50%;
+        left: 55%;
         top: 50%;
         transform: translate(-50%,-50%);
         }
