@@ -99,8 +99,26 @@ function GameState(state){
             break;
         case "Gameover":
             debug(1, "Gameover");
-            // Clear main
-            // Append Gameover HTML
+            body.empty();
+            body.append(
+                '<main class="container gameover">'+
+                    '<header>'+
+                    '</header>'+
+                    '<div class="d-flex justify-content-center">'+
+                        '<div class="intro">'+
+                            '<p>You won with '+score+' points!</p>'+
+                        '</div>'+
+                        '<div class="btn-start">'+
+                            '<p>Replay</p>'+
+                        '</div>'+
+                    '</div>'+
+                    '<footer>'+
+                        '<p class="title">Meowmory</p>'+
+                        '<p class="credits">Developed by Alec Stone and Designed by Irina Csapo for fun in 2018</p>'+
+                    '</footer>'+
+                    '<script src="start.js"></script>'+
+                '</main>'
+            );
             break;
         default:
             debug(1, "Invalid Game State");

@@ -1,3 +1,5 @@
+var score = 100;
+
 $(document).ready(function(){
     var gridSize = "3,2";
     var xyarr = gridSize.split(','); // split the co-ords
@@ -158,8 +160,9 @@ $(document).ready(function(){
             if ($(".matched").length >= total){
                 if (clickCount <= total) {
                     alert("Hmm...interesting...");
+                    GameState('Gameover')
                 } else {
-                    alert(" ^ↀᴥↀ^ You Scored " + score + " Points ^ↀᴥↀ^ ");
+                    GameState('Gameover');
                 }
             } else {
                 clickCount++;

@@ -300,6 +300,10 @@ footer{
     background: linear-gradient(to bottom right, #44338d 0%,#6a8bc8 100%);
 }
 
+.gameover{
+    background: linear-gradient(to bottom right, #33878d 0%,#6a8bc8 100%);
+}
+
 .btn-start{
     position: absolute;
     transform: translate(0,-50%);
