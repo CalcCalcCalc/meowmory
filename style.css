@@ -624,4 +624,25 @@ footer{
         text-align: center;
         width: 280px;
     }
+    .gameover{
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        background: linear-gradient(to bottom right, #33878d 0%,#6a8bc8 100%);
+        opacity:0.9;
+    }
+    
+    .score-element{
+        height: 100px;
+        margin: 10px;
+        float: left;
+        top: 0px;
+        left: 30px;
+        position: relative;
+        font-size: 2rem;
+    }
+    
+    .score{
+        font-family: gotham-bold;
+    }
 }
