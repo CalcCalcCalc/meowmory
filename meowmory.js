@@ -13,8 +13,8 @@ $(document).ready(function(){
         $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
         $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
     } else {
-        $(".wrapper").css("grid-template-columns", "repeat("+ y +"," + 100 / (x * 4) + "rem)");
-        $(".wrapper").css("grid-template-rows", "repeat(" + x + "," + 100 / (x * 4) + "rem)");
+        $(".wrapper").css("grid-template-columns", "repeat("+ y +"," + 100 / (x * 6) + "rem)");
+        $(".wrapper").css("grid-template-rows", "repeat(" + x + "," + 100 / (x * 6) + "rem)");
     }
 
     $("#difficulty").change(function(){
@@ -33,8 +33,8 @@ $(document).ready(function(){
             $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
             $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
         } else {
-            $(".wrapper").css("grid-template-columns", "repeat("+ y +"," + 100 / (x * 4) + "rem)");
-            $(".wrapper").css("grid-template-rows", "repeat(" + x + "," + 100 / (x * 4) + "rem)");
+            $(".wrapper").css("grid-template-columns", "repeat("+ y +"," + 100 / (x * 6) + "rem)");
+            $(".wrapper").css("grid-template-rows", "repeat(" + x + "," + 100 / (x * 6) + "rem)");
         }
     });
 
