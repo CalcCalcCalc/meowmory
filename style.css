@@ -121,12 +121,11 @@ p{
 }
 
 .game header{
-    /* position:absolute; 
-    height: 10%; 
-    width: 100%; */
+    position: relative;;  
+    width: 100%; 
     font-family: catbox;
     background-color: lightgray; 
-    /* z-index: 10; */
+    z-index: 10;
 }
 
 .game header > p{
@@ -201,12 +200,10 @@ footer{
 .gear{
     height: 100px;
     margin: 10px;
-    margin-right: 20px;
     float: right;
     top: 0px;
     right: 0;
-    position: absolute;
-    top: -15px;
+    position: relative;
 }
 
 .gear:hover{
@@ -470,13 +467,11 @@ footer{
     
     .gear{
         height: 50px;
-        margin: 25px;
-        margin-right: 20px;
+        margin: 5px;
         float: right;
         top: 0px;
         right: 0;
-        position: absolute;
-        top: -15px;
+        position: relative;
     }
     
     .gear:hover{
@@ -583,7 +578,7 @@ footer{
     }
     
     .title{
-        bottom: -4px;
+        /* bottom: -4px; */
         font-family: catbox;
         color: white;
         font-size: 2.6rem;

@@ -16,12 +16,11 @@ $(document).ready(function(){
         $(".wrapper").css("grid-template-rows", "repeat(" + x + "," + 100 / (x * 4) + "rem)");
     }
 
-
     $("#difficulty").change(function(){
         gridSize = $(this).val();
         var xyarr = gridSize.split(','); // split the co-ords
-        var x = xyarr[0]; // co-ord 1 is x
-        var y = xyarr[1]; // co-ord 2 is y
+        x = xyarr[0]; // co-ord 1 is x
+        y = xyarr[1]; // co-ord 2 is y
         makeGrid(x, y);
         total = $(".card-memory").length;
         score = 100;
@@ -51,8 +50,19 @@ $(document).ready(function(){
             $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
             $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
         } else {
-            $(".wrapper").css("grid-template-columns", "repeat("+ y +"," + 100 / (x * 4) + "rem)");
-            $(".wrapper").css("grid-template-rows", "repeat(" + x + "," + 100 / (x * 4) + "rem)");
+            $(".wrapper").css("grid-template-columns", "repeat("+ y +"," + 100 / (x * 6) + "rem)");
+            $(".wrapper").css("grid-template-rows", "repeat(" + x + "," + 100 / (x * 6) + "rem)");
+        }
+    });
+
+
+    $(window).resize(function(){
+        if (window.innerWidth > 770){
+            $(".wrapper").css("grid-template-columns", "repeat("+ x +"," + 100 / (x * 2) + "rem)");
+            $(".wrapper").css("grid-template-rows", "repeat(" + y + "," + 100 / (x * 2) + "rem)");
+        } else {
+            $(".wrapper").css("grid-template-columns", "repeat("+ y +"," + 100 / (x * 6) + "rem)");
+            $(".wrapper").css("grid-template-rows", "repeat(" + x + "," + 100 / (x * 6) + "rem)");
         }
     });
 
@@ -147,7 +157,7 @@ $(document).ready(function(){
 
             if ($(".matched").length >= total){
                 if (clickCount <= total) {
-                    alert("Cheater!");
+                    alert("Hmm...interesting...");
                 } else {
                     alert(" ^ↀᴥↀ^ You Scored " + score + " Points ^ↀᴥↀ^ ");
                 }
