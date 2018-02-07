@@ -60,6 +60,9 @@ function GameState(state){
                         '</select>'+
                         '<a href="#" id="reset">Reset</a>'+
                     '</div>'+
+                        '<span class="score-element">'+
+                            'Accuracy:<span class="score">100</span>'+
+                        '</span>'+
                         '<img src="img/gear.png" class="gear" onclick="openNav()" height="50px">'+
                     '</header>'+
                     '<div class="">'+
@@ -99,25 +102,16 @@ function GameState(state){
             break;
         case "Gameover":
             debug(1, "Gameover");
-            body.empty();
-            body.append(
-                '<main class="container gameover">'+
-                    '<header>'+
-                    '</header>'+
-                    '<div class="d-flex justify-content-center">'+
+            var $main = $('main');
+            $main.append(
+                    '<div class="d-flex justify-content-center gameover">'+
                         '<div class="intro">'+
                             '<p>You won with '+score+' points!</p>'+
                         '</div>'+
-                        '<div class="btn-start">'+
+                        '<div class="btn-start" onClick="GameState(\'Game\'); return false;">'+
                             '<p>Replay</p>'+
                         '</div>'+
-                    '</div>'+
-                    '<footer>'+
-                        '<p class="title">Meowmory</p>'+
-                        '<p class="credits">Developed by Alec Stone and Designed by Irina Csapo for fun in 2018</p>'+
-                    '</footer>'+
-                    '<script src="start.js"></script>'+
-                '</main>'
+                    '</div>'
             );
             break;
         default:

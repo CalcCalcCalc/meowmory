@@ -1,5 +1,4 @@
 var score = 100;
-
 $(document).ready(function(){
     var gridSize = "3,2";
     var xyarr = gridSize.split(','); // split the co-ords
@@ -26,6 +25,7 @@ $(document).ready(function(){
         makeGrid(x, y);
         total = $(".card-memory").length;
         score = 100;
+        $('.score').html(score);
         clickCount = 0;
         debug(2, "new game");
         CardClick(); // reinitialise click logic
@@ -166,8 +166,9 @@ $(document).ready(function(){
                 }
             } else {
                 clickCount++;
-                if (clickCount >= total * 2 && clickCount % 2 == 0) {
+                if (clickCount >= (total * 2)-2 && clickCount % 2 == 0) {
                     score -= parseInt(100/total);
+                    $(".score").html(score);
                 }
             }
         });
