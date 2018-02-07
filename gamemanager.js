@@ -6,7 +6,7 @@ function debug ( mode, string ) {
 
 /* Open */
 function openNav() {
-    document.getElementById("myNav").style.height = "10%";
+    document.getElementById("myNav").style.height = "100%";
 }
 
 /* Close */
